@@ -58,7 +58,33 @@ body {
 
   text-shadow: 2px 2px 12px rgba(0,0,0,0.7);
 }
+.hero {
+  position: relative;
+}
 
+.hero img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+/* これを追加（重要） */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 文字を前に出す */
+.hero-sub,
+.hero-main {
+  position: absolute;
+  z-index: 2;
+}
 /* サブ */
 .hero p {
   position: absolute;
