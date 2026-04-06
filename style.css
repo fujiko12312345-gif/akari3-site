@@ -1,288 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Hiragino Mincho ProN', serif;
-  color: #2f2a26;
-  line-height: 1.9;
-  background-color: #f7f3ee;
-  margin: 0;
+  font-family: sans-serif;
+  background: #f5f2ed;
+  color: #333;
 }
 
-header {
-  background: #2b1710;
-  color: #f3e7d7;
+/* ヘッダー */
+.header {
   text-align: center;
-  padding: 28px 20px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 50px;
-  font-weight: normal;
+  padding: 20px;
+  background: #4b2e1f;
+  color: white;
   letter-spacing: 3px;
 }
 
-.main-visual {
+/* ================= */
+/* トップ（完成版） */
+/* ================= */
+
+.hero {
   position: relative;
+  text-align: center;
 }
 
-.main-visual img {
+/* 画像 */
+.hero img {
   width: 100%;
-  height: 480px;
+  height: 420px;
   object-fit: cover;
   display: block;
-  filter: brightness(65%);
 }
 
-.main-copy {
+/* 暗いフィルター（重要） */
+.hero::before {
+  content: "";
   position: absolute;
-  top: 50%;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+/* タイトル */
+.hero h2 {
+  position: absolute;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fffaf3;
-  text-align: center;
-  width: 90%;
+
+  color: white;
+  font-size: 36px;
+  letter-spacing: 4px;
+
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.7);
 }
 
-.copy-sub {
-  font-size: 38px;
-  letter-spacing: 2px;
-  margin-bottom: 16px;
+/* サブ */
+.hero p {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+  font-size: 18px;
+
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.7);
 }
 
-.main-copy h2 {
-  font-size: 46px;
-  line-height: 1.5;
-  margin: 0;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+/* ================= */
+/* セクション */
+/* ================= */
+
+.section {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-section {
-  padding: 70px 20px;
+.section h2 {
+  margin-bottom: 20px;
+  border-left: 5px solid #c8853a;
+  padding-left: 10px;
 }
 
-h2 {
-  text-align: center;
-  font-size: 34px;
-  margin: 0 0 30px;
-  color: #2b1710;
+.section h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
-.about p {
-  max-width: 900px;
-  margin: 0 auto 24px;
-  text-align: center;
-  color: #5f564f;
-}
+/* ================= */
+/* グリッド */
+/* ================= */
 
-.menu-section {
-  background: #fbf8f3;
-}
-
-.menu-grid {
+.grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 20px;
 }
 
-.menu-card {
+/* ================= */
+/* カード */
+/* ================= */
+
+.card {
   background: white;
-  border-radius: 18px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: 0.3s;
 }
 
-.menu-card img {
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* 画像サイズ統一 */
+.card img {
   width: 100%;
-  height: 230px;
+  height: 220px;
   object-fit: cover;
-  display: block;
 }
 
-.menu-card h3 {
-  font-size: 24px;
-  margin: 22px 20px 12px;
-  color: #2b1710;
+/* テキスト */
+.card p {
+  padding: 12px;
+  font-size: 16px;
 }
 
-.menu-card-desc {
-  font-size: 15px;
-  color: #5f564f;
-  margin: 0 20px 24px;
-  line-height: 1.9;
-}
+/* ================= */
+/* インスタ */
+/* ================= */
 
-.afternoon-time {
-  background: #1f0f08;
-  color: #f4efe8;
+.insta-area {
   text-align: center;
-  padding: 100px 20px;
+  margin: 30px 0;
 }
 
-.afternoon-sub {
-  color: #d8b15a;
-  letter-spacing: 8px;
-  font-size: 18px;
-  margin-bottom: 40px;
+.insta-btn {
+  display: inline-block;
+  padding: 14px 26px;
+  font-size: 16px;
+  background: linear-gradient(45deg, #c8853a, #e0a96d);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-.afternoon-hours {
-  color: #d8b15a;
-  font-size: 120px;
-  line-height: 1;
-  margin-bottom: 50px;
+.insta-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(45deg, #a96c2f, #d39b5a);
 }
 
-.afternoon-hours .dash {
-  margin: 0 30px;
-}
-
-.afternoon-time h2 {
-  color: #f4efe8;
-  font-size: 72px;
-  font-weight: normal;
-  margin: 0;
-}
-
-.afternoon-line {
-  width: 60px;
-  height: 2px;
-  background: #d8b15a;
-  margin: 35px auto 45px;
-}
-
-.afternoon-text {
-  color: #d9d0c8;
-  font-size: 18px;
-  line-height: 2.4;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.info {
-  text-align: center;
-}
-
-.info p {
-  color: #5f564f;
-}
-
-.map {
-  text-align: center;
-  padding-top: 10px;
-}
+/* ================= */
+/* マップ */
+/* ================= */
 
 .map iframe {
-  width: 85%;
-  max-width: 900px;
-  height: 420px;
-  border: 0;
-  border-radius: 18px;
-  display: block;
-  margin: 0 auto;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  height: 350px;
+  border: none;
+  margin-top: 20px;
+  border-radius: 10px;
 }
 
-.instagram-link {
-  text-align: center;
-  padding-top: 20px;
-}
-
-.instagram-link p {
-  color: #5f564f;
-  margin-bottom: 18px;
-}
-
-.instagram-link a {
-  display: inline-block;
-  background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
-  color: white;
-  text-decoration: none;
-  padding: 14px 30px;
-  border-radius: 999px;
-  font-weight: bold;
-  transition: transform 0.3s ease;
-}
-
-.instagram-link a:hover {
-  transform: scale(1.05);
-}
+/* ================= */
+/* フッター */
+/* ================= */
 
 footer {
-  background: #2b1710;
-  color: #f3e7d7;
   text-align: center;
-  padding: 22px;
-  font-size: 14px;
+  padding: 20px;
+  background: #333;
+  color: white;
 }
 
-@media (max-width: 900px) {
-  .menu-grid {
-    grid-template-columns: 1fr 1fr;
+/* ================= */
+/* スマホ */
+/* ================= */
+
+@media (max-width: 700px) {
+
+  .hero img {
+    height: 260px;
   }
 
-  .main-copy h2 {
-    font-size: 34px;
-  }
-
-  .afternoon-hours {
-    font-size: 34px;
-  }
-
-  .afternoon-time h2 {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 28px;
-  }
-
-  .main-visual img {
-    height: 300px;
-  }
-
-  .copy-sub {
-    font-size: 13px;
-  }
-
-  .main-copy h2 {
+  .hero h2 {
     font-size: 24px;
   }
 
-  h2 {
-    font-size: 26px;
-  }
-
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .afternoon-sub {
+  .hero p {
     font-size: 14px;
-    letter-spacing: 4px;
   }
 
-  .afternoon-hours {
-    font-size: 38px;
-  }
-
-  .afternoon-hours .dash {
-    margin: 0 10px;
-  }
-
-  .afternoon-time h2 {
-    font-size: 25px;
-  }
-
-  .afternoon-text {
-    font-size: 25px;
-    line-height: 2;
-  }
-
-  .map iframe {
-    width: 95%;
-    height: 300px;
+  .grid {
+    grid-template-columns: 1fr;
   }
 }
