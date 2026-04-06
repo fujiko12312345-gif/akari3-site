@@ -1,149 +1,98 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>珈琲 燈</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>珈琲 燈</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
+<!-- ヘッダー -->
+<header class="header">
   <h1>珈琲 燈</h1>
 </header>
 
-<!-- メイン画像 -->
-<section class="main-visual">
-  <img src="main.jpg" alt="店内">
-  <div class="main-copy">
-    <p class="copy-sub">福岡・薬院の路地裏にある小さな一軒家喫茶</p>
-    <h2>一杯のコーヒーが、<br>一日に小さな灯りを。</h2>
-  </div>
+<!-- トップ -->
+<section class="hero">
+
+  <img src="images/main.jpg">
+
+  <p class="hero-sub">
+    福岡・薬院の路地裏にある小さな一軒家喫茶
+  </p>
+
+  <h2 class="hero-main">
+    一杯のコーヒーが、<br>
+    一日に小さな灯りを。
+  </h2>
+
 </section>
 
-<!-- 外観 -->
-<section class="about">
+<!-- ABOUT -->
+<section class="section">
   <h2>珈琲 燈について</h2>
 
-  <img src="gaikan.jpg" style="width:100%; max-width:600px; display:block; margin:0 auto 30px; border-radius:12px;">
+  <img src="images/cr.jpg" class="about-img">
 
   <p>
-    「珈琲 燈」は、福岡・薬院の路地裏にある小さな一軒家喫茶です。店名は創業者である父がつけたもの。「一杯のコーヒーが、その人の一日に小さな灯りになれば」という想いが、今も変わらずこの店に流れています。</p>
-          <p>12席のこぢんまりとした店内には、開店当初から使い続けているカウンターとテーブルがあります。古いけれど、それがかえって落ち着くと言ってくださるお客様が多くて。</p>
-          <p>国内外の農園から、その季節に最も良い豆を少量ずつ仕入れています。豆によって抽出温度と時間をすべて変える。それがマスターのこだわりです。</p>
-
-  
-</section>
-
-<!-- メニュー -->
-<section class="menu-section">
-  <h2>お品書き</h2>
-
-  <div class="menu-grid">
-
-    <div class="menu-card">
-      <img src="b.jpg">
-      <h3>燈ブレンド</h3>
-      <p>バランスの取れた自家製ブレンド。</p>
-    </div>
-
-    <div class="menu-card">
-      <img src="g.jpg">
-      <h3>ゲイシャ</h3>
-      <p>華やかな香りのスペシャルティ。</p>
-    </div>
-
-    <div class="menu-card">
-      <img src="cl.jpg">
-      <h3>カフェラテ</h3>
-      <p>ミルクたっぷりのやさしい味。</p>
-    </div>
-
-    <div class="menu-card">
-      <img src="e.jpg">
-      <h3>エチオピア</h3>
-      <p>フルーティーな酸味。</p>
-    </div>
-
-    <div class="menu-card">
-      <img src="p.jpg">
-      <h3>プリン</h3>
-      <p>昔ながらの固めプリン。</p>
-    </div>
-
-    <div class="menu-card">
-      <img src="c.jpg">
-      <h3>コーヒーゼリー</h3>
-      <p>人気の定番スイーツ。</p>
-    </div>
-
-    <div class="menu-card">
-      <img src="k.jpg">
-      <h3>季節のケーキ</h3>
-      <p>季節ごとの味わい。</p>
-    </div>
-
-    <div class="menu-card">
-      <img src="m.jpg">
-      <h3>モーニング</h3>
-      <p>焼きたてトースト。</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- アフタヌーン -->
-<section class="afternoon-time">
-
-  <p class="afternoon-sub">AFTERNOON</p>
-
-  <div class="afternoon-hours">
-    <span>14:00</span>
-    <span class="dash">—</span>
-    <span>16:00</span>
-  </div>
-
-  <h2>午後のひととき</h2>
-
-  <div class="afternoon-line"></div>
-
-  <p class="afternoon-text">
-    子どもを送り出したあと、少しだけ自分の時間を。<br>
-    静かな空間で、一杯のコーヒーと甘いものを。<br>
-    何気ない時間が、少し特別になります。
-  </p>
-
-</section>
-
-<!-- 店舗情報 -->
-<section class="info">
-  <h2>店舗情報</h2>
-  <p>
-    営業時間：8:00〜18:00<br>
-    定休日：日曜・祝日<br>
-    住所：福岡県福岡市中央区薬院
+    「珈琲 燈」は、福岡・薬院の路地裏にある小さな一軒家喫茶です。
+    店名は創業者である父がつけたもの。
+    「一杯のコーヒーが、その人の一日に小さな灯りになれば」という想いが、
+    今も変わらずこの店に流れています。
   </p>
 </section>
 
-<!-- マップ -->
-<section class="map">
-  <h2>アクセス</h2>
-  <iframe
-    src="https://www.google.com/maps?q=福岡県福岡市中央区薬院&output=embed">
-  </iframe>
+<!-- MENU -->
+<section class="section">
+
+<h2>メニュー</h2>
+
+<h3>コーヒー</h3>
+<div class="grid">
+  <div class="card"><img src="images/g.jpg"><p>ゲイシャ ¥1200</p></div>
+  <div class="card"><img src="images/e.jpg"><p>エチオピア ¥950</p></div>
+  <div class="card"><img src="images/b.jpg"><p>燈ブレンド ¥650</p></div>
+</div>
+
+<h3>スイーツ</h3>
+<div class="grid">
+  <div class="card"><img src="images/c.jpg"><p>コーヒーゼリー ¥550</p></div>
+  <div class="card"><img src="images/p.jpg"><p>プリン ¥500</p></div>
+  <div class="card"><img src="images/s.jpg"><p>ケーキ ¥650</p></div>
+</div>
+
+<h3>モーニング</h3>
+<div class="grid">
+  <div class="card"><img src="images/m.png"><p>モーニング ¥800</p></div>
+  <div class="card"><img src="images/t.jpg"><p>トースト ¥350</p></div>
+  <div class="card"><img src="images/k.jpg"><p>サラダ ¥300</p></div>
+</div>
+
 </section>
 
-<!-- インスタ -->
-<section class="instagram-link">
-  <h2>Instagram</h2>
-  <p>最新情報はこちら</p>
-  <a href="https://www.instagram.com/" target="_blank">
-    Instagramを見る
+<!-- アクセス -->
+<section class="section">
+
+<h2>アクセス</h2>
+<p>福岡県福岡市中央区薬院2丁目16-1</p>
+
+<div class="insta-area">
+  <a href="https://www.instagram.com/fujiko_maemae/" target="_blank" class="insta-btn">
+    📷 Instagramを見る
   </a>
+</div>
+
+<div class="map">
+  <iframe src="https://www.google.com/maps?q=福岡県福岡市中央区薬院2丁目16-1&output=embed"></iframe>
+</div>
+
 </section>
 
+<!-- フッター -->
 <footer>
-  © 珈琲 燈
+  <p>© 珈琲 燈</p>
 </footer>
 
 </body>
